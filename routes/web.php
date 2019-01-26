@@ -11,14 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::resource('todo','todocontroller');
+
+Route::get('/file',function(){
+	return view('file.home');
 });
-
-Route::get('/students','StudentController@index');
-Route::get('/insertdata','StudentController@display');
-Route::post('/add','StudentController@store');
-Route::get('editdata/{id}','StudentController@edit');
-Route::post('/update/{id}','StudentController@update');
-
-Route::get('delete/{id}','StudentController@delete');

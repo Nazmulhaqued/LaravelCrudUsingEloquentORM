@@ -12,9 +12,13 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
         $students = student::all();
         return view('studentform',compact('students'));
+    }
+    public function about()
+    {   
+        return view('about');
     }
 
     /**
